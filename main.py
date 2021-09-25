@@ -1,11 +1,11 @@
 # 1 - imports / bibliotecas
-
+import pytest
 # 2 - Classe
 
 # 3 - Métodos e funções
 #def = definition = definição
 def print_hi(name):
-    print(f'Hi, {name}')    #a partir do python3
+    print(f'Oi, {name}')    #a partir do python3
     print('Oi, ' + name)    #antes do python3
 
 def calcular_area_do_retangulo(largura, comprimento):
@@ -40,27 +40,54 @@ def brincar_de_plim(fim):
         else:
             print('{:0>3}'.format(numero))
 
+
 # estrutura de identificação / execução do script
 if __name__ == '__main__':
-    print_hi('KarlaDaiany')
 
-# chamar a função de cálculo da área do retângulo
-    resultado = calcular_area_do_retangulo(3,4)
-    print(f'A área do retângulo é de {resultado}m²')
+    resposta = 'C'
 
-# chamar a função de cálculo da área do quadrado
-    resultado = calcular_area_do_quadrado(5)
-    print(f'A área do quadrado é de {resultado}m²')
+    while resposta.upper() != 'Z':
 
-# chamar a função de cálculo da área do triângulo
-    resultado = calcular_area_do_triangulo(6,7)
-    print(f'A área do triângulo é de {resultado}m²')
+        print('###################################')
+        print('#                                 #')
+        print('#   M E N U   D E   O P Ç Õ E S   #')
+        print('#                                 #')
+        print('###################################')
+        print('#                                 #')
+        print('#   1 - Olá mundo                 #')
+        print('#   2 - Área do Retângulo         #')
+        print('#   3 - Área do Quadrado          #')
+        print('#   4 - Área do Triângulo         #')
+        print('#   5 - Contagem Progressiva      #')
+        print('#   6 - Apoiar Candidato          #')
+        print('#   7 - Brincar de Plim!          #')
+        print('#                                 #')
+        print('#   Z - Sair                      #')
+        print('#                                 #')
+        print('###################################')
 
-# chamar a função de contagem progressiva
-    contagem_progressiva(10)
+        resposta = input('Escolha sua opção: ')
+        print(f'A sua escolha foi: {resposta}')
 
-# chamar a função de apoiar candidato
-    apoiar_candidato('Faker', 100)
-
-# brincar de plim
-    brincar_de_plim(100)
+        if resposta.upper() != 'Z':
+            if resposta == '1':
+                print_hi('KarlaDaiany')
+            elif resposta == '2':
+                resultado = calcular_area_do_retangulo(3, 4)
+                print(f'A área do retângulo é de {resultado}m²')
+            elif resposta == '3':
+                resultado = calcular_area_do_quadrado(5)
+                print(f'A área do quadrado é de {resultado}m²')
+            elif resposta == '4':
+                resultado = calcular_area_do_triangulo(6,7)
+                print(f'A área do triângulo é de {resultado}m²')
+            elif resposta == '5':
+                contagem_progressiva(8)
+            elif resposta == '6':
+                apoiar_candidato('Sabado',11)
+            elif resposta == '7':
+                brincar_de_plim(10)
+            else:
+                print('Opção Inválida. Escolha uma opção válida.')
+        else:
+            print('Você escolheu sair. Obrigada e Volte Sempre!')
