@@ -1,10 +1,12 @@
-# import
+# 1 - imports / bibliotecas
 
-# metodos / funções
+# 2 - Classe
 
+# 3 - Métodos e funções
 #def = definition = definição
 def print_hi(name):
-    print(f'Hi, {name}')
+    print(f'Hi, {name}')    #a partir do python3
+    print('Oi, ' + name)    #antes do python3
 
 def calcular_area_do_retangulo(largura, comprimento):
     return largura * comprimento
@@ -34,9 +36,9 @@ def apoiar_candidato(nome, vezes):
 def brincar_de_plim(fim):
     for numero in range(fim):
         if numero % 4 == 0:
-        print('PLIM!')
-    else:
-        print('{:0>3}'.format(numero))
+            print('PLIM!')
+        else:
+            print('{:0>3}'.format(numero))
 
 # estrutura de identificação / execução do script
 if __name__ == '__main__':
@@ -44,7 +46,7 @@ if __name__ == '__main__':
 
 # chamar a função de cálculo da área do retângulo
     resultado = calcular_area_do_retangulo(3,4)
-    print(f'A área do retâgulo é de {resultado}m²')
+    print(f'A área do retângulo é de {resultado}m²')
 
 # chamar a função de cálculo da área do quadrado
     resultado = calcular_area_do_quadrado(5)
@@ -59,3 +61,6 @@ if __name__ == '__main__':
 
 # chamar a função de apoiar candidato
     apoiar_candidato('Faker', 100)
+
+# brincar de plim
+    brincar_de_plim(100)
